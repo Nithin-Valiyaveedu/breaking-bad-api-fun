@@ -6,7 +6,7 @@
 
 html,
 body {
-  background: #000 url('img/bg.jpg') no-repeat center center/cover;
+  background: #000 url("img/bg.jpg") no-repeat center center/cover;
   height: 100vh;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
@@ -29,14 +29,13 @@ a {
   justify-content: center;
 }
 
-.cards{
+.cards {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
 
-
-.card{
+.card {
   cursor: pointer;
   background-color: transparent;
   height: 300px;
@@ -56,10 +55,9 @@ a {
   margin-bottom: 10px;
 }
 
-
-.card-inner{
+.card-inner {
   position: relative;
-  width:100%;
+  width: 100%;
   height: 100%;
   transition: transform 0.8s;
   transform-style: preserve-3d;
@@ -69,7 +67,8 @@ a {
   transform: rotateY(180deg);
 }
 
-.card-front,.card-back{
+.card-front,
+.card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -84,20 +83,19 @@ a {
   transform: rotateY(180deg);
 }
 
-.card ul{
+.card ul {
   margin: 2rem 0;
 }
-.card li{
+.card li {
   list-style: none;
   padding-bottom: 10px;
 }
 
-
-.search{
+.search {
   height: 100px;
 }
 
-input[type='text'] {
+input[type="text"] {
   display: block;
   padding: 10px;
   font-size: 20px;
@@ -108,7 +106,39 @@ input[type='text'] {
   outline: none;
 }
 
-.spinner{
+.spinner {
   display: block;
   margin: auto;
 }
+
+
+@media (max-width: 400px){
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 1rem;
+  }
+  .center img{
+    width: 50%;
+    height: 50%;
+  }
+
+} 
+@media only screen and (min-width: 400px) and (max-width: 650px){
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 660px) and (max-width: 800px){
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+  }
+}
+
+
+
